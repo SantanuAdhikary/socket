@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initialscale=1.0">
+<title>Document</title>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.
+js" integrity="sha512-
+VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/m
+TpRdXtq8O2RcZhlQ==" crossorigin="anonymous" referrerpolicy="noreferrer"></script>
+</head>
+<body>
+<h1>hello world</h1>
+<script>
+var socket = io();
+
+// using predefinded event 
+
+            // socket.on('message',(data)=>{
+            //     document.write(data);
+            // })
+
+
+// using custom  event 
+
+            // socket.on('cus_event',(data)=>{
+            //     document.write(data);
+            // })
+
+// using broadcast 
+
+                socket.on('broadcast',(data)=>{
+                document.body.innerHTML="";
+                document.write(data.message);
+            })
+
+</script>
+</body>
